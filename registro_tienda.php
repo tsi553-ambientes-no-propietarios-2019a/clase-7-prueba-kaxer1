@@ -24,6 +24,7 @@ if($_GET) {
 <?php if(isset($error_message)) { ?>
 	<div><strong><?php echo $error_message; ?></strong></div>
 <?php } ?>
+
     <form action="php/process_registration.php" method="post">
         <div>
             <label>Nombre de la tienda: </label>

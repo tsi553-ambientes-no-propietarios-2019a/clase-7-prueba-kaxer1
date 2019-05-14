@@ -1,10 +1,10 @@
 <?php 
-/*session_start();
+session_start();
 
 function redirect($url) {
 	header('Location: ' . $url);
 	exit;
-}*/
+}
 
     $conn = new mysqli('localhost', 'root', '', 'pruebab1');
 
