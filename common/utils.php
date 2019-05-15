@@ -13,11 +13,10 @@ function redirect($url) {
 	    exit;
     }
 
-/*
-if ($_SERVER['SCRIPT_NAME'] != '/index.php' && $_SERVER['SCRIPT_NAME'] != '/php/process_login.php' && !isset($_SESSION['user'])) {
-	redirect($_SERVER["HTTP_HOST"] . '/index.php');
-} elseif( $_SERVER['SCRIPT_NAME'] == '/index.php' && isset($_SESSION['user']) ) {
 
-	redirect($_SERVER["HTTP_HOST"] . '/home.php');
+if ($_SERVER['SCRIPT_NAME'] != '/clase-7-prueba-kaxer1/index.php' && $_SERVER['SCRIPT_NAME'] != '/clase-7-prueba-kaxer1/php/process_login.php' && !isset($_SESSION['user'])) {
+	redirect($_SERVER["HTTP_HOST"] . '/clase-7-prueba-kaxer1/index.php');
+} elseif( $_SERVER['SCRIPT_NAME'] == '/clase-7-prueba-kaxer1/index.php' && isset($_SESSION['user']) ) {
+
+	redirect($_SERVER["HTTP_HOST"] . '/clase-7-prueba-kaxer1/inicio.php');
 }
-*/

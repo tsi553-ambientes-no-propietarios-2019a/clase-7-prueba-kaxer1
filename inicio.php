@@ -15,8 +15,25 @@ include('common/utils.php');
     <h1> <center>TIENDAS EC</center> </h1>
     <br>
     <br>
-    <h2> Bienvenido</h2>
+    
+    <h2>Bienvenido <?php echo $_SESSION['user']['user_tienda']; ?></h2>
     <br>
+    
+    <h2>Nombre de la tienda: <?php echo $_SESSION['user']['nom_tienda'];?> </h2>
+    
+    <h3>Productos en la tienda:</h3>
+    <br>
+
+
+
+    <a href="registro_producto.php"> Registrar nuevo producto</a>
+
+
+
+
+    <br>
+    <br>
+	<div><a href="php/logout.php">Cerrar sesión</a></div>
 
 </body>
 </html>

@@ -20,8 +20,8 @@ if($_POST) {
 		if($res->num_rows > 0) {
 				while ($row = $res->fetch_assoc()) {
 					$_SESSION['user'] = [
-						'user_tienda' => $row['username'],
-						'id_tienda' => $row['id']
+						'user_tienda' => $row['user_tienda'],
+						'nom_tienda' => $row['nom_tienda']
 					];
 					redirect('../inicio.php');
 				}
