@@ -1,5 +1,6 @@
 <?php
 include('common/utils.php');
+include('php/process_mostrar.php');
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +15,6 @@ include('common/utils.php');
 
     <h1> <center>TIENDAS EC</center> </h1>
     <br>
-    <br>
     
     <h2>Bienvenido <?php echo $_SESSION['user']['user_tienda']; ?></h2>
     <br>
@@ -22,14 +22,25 @@ include('common/utils.php');
     <h2>Nombre de la tienda: <?php echo $_SESSION['user']['nom_tienda'];?> </h2>
     
     <h3>Productos en la tienda:</h3>
+    
+    <center>
+    <table border="2">
+        <tr>
+            <th>Código</th>
+            <th>Nombre</th>            
+            <th>Tipo</th>
+            <th>Stock</th>
+            <th>Precio</th>
+        </tr>
+
+        <?php mostrar_tabla();?>
+    </table>
+    </center>
+    
     <br>
-
-
-
-    <a href="registro_producto.php"> Registrar nuevo producto</a>
-
-
-
+    <br>
+    
+    <a href="nuevo_producto.php"> Registrar nuevo producto</a>
 
     <br>
     <br>

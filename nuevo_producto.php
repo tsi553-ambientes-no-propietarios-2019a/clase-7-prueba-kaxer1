@@ -1,4 +1,6 @@
 <?php 
+include('common/utils.php');
+
 if($_GET) {
 	if(isset($_GET['error_message'])) {
 		$error_message = $_GET['error_message'];
@@ -18,14 +20,18 @@ if($_GET) {
 
     <h1> <center>TIENDAS EC</center> </h1>
     <br>
-    <br>
 	<h2> <center>Registro de nuevo producto</center> </h2>
+    <br>
+    
+    <h2> TIENDA: <?php echo $_SESSION['user']['nom_tienda'];?> </h2>
+    <br>
 
 <?php if(isset($error_message)) { ?>
-	<div><strong><?php echo $error_message; ?></strong></div>
+	<div><strong><?php echo $error_message; ?></strong></div>   
+    <br>
 <?php } ?>
 
-    <form action="php/proccess_producto.php" method="post">
+    <form action="php/process_producto.php" method="post">
         <div>
             <label>Codigo: </label>
             <input type="text" name="codigo">
@@ -37,9 +43,9 @@ if($_GET) {
         <div>
             <label>Tipo: </label>
             <select name="tipo">
-                <option value="1">Alimento</option>
-                <option value="2">Vestimenta</option>
-                <option value="2">Salud</option>
+                <option value="Alimento">Alimento</option>
+                <option value="Vestimenta">Vestimenta</option>
+                <option value="Salud">Salud</option>
             </select>
         </div>
         <div>
@@ -55,9 +61,5 @@ if($_GET) {
         </div>
     </form>
     
-<br>
-<br>
-<a href="inicio.php">Regrese a inicio</a>
-
 </body>
 </html>

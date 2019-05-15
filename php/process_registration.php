@@ -1,5 +1,5 @@
 <?php 
-include('../common/utils.php');
+include('../common/utils_sin_sesion.php');
 
 if($_POST){
     if (isset($_POST['username']) && isset($_POST['password']) &&
@@ -23,14 +23,10 @@ if($_POST){
                 if ($conn->error) {
                     echo 'Ocurrió un error ' . $conn->error;
                 } 
-                //else {
-                //    redirect('../index.php');
-                //}
-    
+                
                 header('Location: ../index.php?error_message=Tienda registrada exitosamente, puede iniciar sesion');
 	            exit;
 
-           // insertar_registro($nom_tienda,$username,$password,$rep_pass);
         }else{
             header('Location: ../registro_tienda.php?error_message=Las contraseñas no coinciden!');
 		    exit;

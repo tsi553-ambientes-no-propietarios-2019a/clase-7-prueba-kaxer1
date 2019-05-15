@@ -20,3 +20,4 @@ if ($_SERVER['SCRIPT_NAME'] != '/clase-7-prueba-kaxer1/index.php' && $_SERVER['S
 
 	redirect($_SERVER["HTTP_HOST"] . '/clase-7-prueba-kaxer1/inicio.php');
 }
+

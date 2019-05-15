@@ -24,7 +24,7 @@ if($_GET) {
     <br>
 
     <?php if(isset($error_message)) { ?>
-	<div><strong><?php echo $error_message; ?></strong></div>
+	<div><strong><?php echo $error_message; ?></strong></div>   <br>
     <?php } ?>
 
     <form action="php/process_login.php" method="post">

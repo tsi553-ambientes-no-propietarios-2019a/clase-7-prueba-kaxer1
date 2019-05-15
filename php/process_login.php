@@ -21,7 +21,8 @@ if($_POST) {
 				while ($row = $res->fetch_assoc()) {
 					$_SESSION['user'] = [
 						'user_tienda' => $row['user_tienda'],
-						'nom_tienda' => $row['nom_tienda']
+						'nom_tienda' => $row['nom_tienda'],
+						'id_tienda' => $row['id_tienda']
 					];
 					redirect('../inicio.php');
 				}
